@@ -37,7 +37,7 @@
   */
   img, picture, video, canvas, svg {
     display: block;
-    /* max-width: 100%; */
+    max-width: 100%;
   }
   /*
     7. Remove built-in form typography styles
@@ -75,7 +75,10 @@
 
 body {
     background: var(--Violet) url(../images/bg-mobile.svg) left bottom no-repeat;
-    background-size: cover;   
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
 }
 
 .card {
@@ -95,6 +98,7 @@ body {
     'three'
     'four';
     grid-auto-columns: 1fr;
+    max-width: 550px;
 }
 
 .logo {
@@ -121,7 +125,6 @@ body {
 
 .mockup {
     margin: auto;
-    width: 25rem;
 }
 
 .text {
@@ -189,10 +192,7 @@ ion-icon:hover {
     body {
         background: hsl(257, 40%, 49%) url(../images/bg-desktop.svg) center center no-repeat;
         background-size: cover;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     .card {
@@ -200,7 +200,11 @@ ion-icon:hover {
       'one one'
       'two three'
       'four four';
-      max-width: 1050px;
+      max-width: 1200px;
+    }
+
+    .mockup {
+      max-width: 100%;
     }
 
     .text {
