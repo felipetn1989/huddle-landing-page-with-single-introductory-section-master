@@ -198,10 +198,10 @@ ion-icon:hover {
 
 @media screen and (min-width: 1000px) {
   body {
-    background: hsl(257, 40%, 49%) url(../images/bg-desktop.svg) center center
-      no-repeat;
-    background-size: cover;
+    background: hsl(257, 40%, 49%) url(../images/bg-desktop.svg) no-repeat
+      center center/cover;
     justify-content: center;
+    gap: unset;
   }
 
   .card {
@@ -209,30 +209,56 @@ ion-icon:hover {
       "one one"
       "two three"
       "four four";
-    max-width: 1200px;
+    column-gap: 3rem;
+    grid-template-columns: 1.25fr 1fr;
+    max-width: unset;
+    width: 100%;
+    padding: 0rem 4.5rem;
+  }
+
+  .logo {
+    width: 13rem;
+    margin-bottom: 2.25rem;
+    margin-top: 3.25rem;
   }
 
   .mockup {
-    max-width: 100%;
+    width: 100%;
+    place-self: start center;
   }
 
   .text {
+    margin-top: 3.25rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: justify;
+    text-align: left;
   }
 
   .text h1 {
-    margin-right: 10rem;
+    font-size: 2.5rem;
+  }
+
+  .text p {
+    font-size: 1.125rem;
   }
 
   .register {
     margin: 0;
-    width: 25%;
+    width: 12.5rem;
+    font-size: 1.125rem;
+    border-radius: 3rem;
+    margin-top: .5rem;
   }
 
   .flex_group {
     justify-content: flex-end;
+    transform: translate(-2.25rem, -2.125rem);
+  }
+
+  ion-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: .5rem;
   }
 }
